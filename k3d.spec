@@ -11,9 +11,10 @@ Source0:	http://www.k-3d.com/downloads/%{name}-%{version}-src.tar.bz2
 BuildRequires:	OpenGL-devel
 BuildRequires:	gtk+-devel >= 1.2.8
 BuildRequires:  BMRT >= 2.5
-#Requires:	
+Requires:	OpenGL
 Buildroot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
+%define 	_noautoreqdep	libGL.so.1 libGLU.so.1
 %define	_prefix	/usr/X11R6
 
 %description
