@@ -1,13 +1,14 @@
-Summary:	K-3D
-Summary(pl):	K-3D
+Summary:	K-3D - 3D modeling, animation, and rendering system
+Summary(pl):	K-3D - system modelowania, animacji i renderingu 3D
 Name:		k3d
 Version:	0.1.18.1
 Release:	1
 License:	GPL
-Group:		X11/Graphics
-Group(pl):	X11/Grafika
+Group:		X11/Applications/Graphics
+Group(de):	X11/Applikationen/Grafik
+Group(pl):	X11/Aplikacje/Grafika
+Group(pt):	X11/Aplicações/Gráficos
 Source0:	http://www.k-3d.com/downloads/%{name}-%{version}-src.tar.bz2
-#Patch0:	%{name}
 BuildRequires:	OpenGL-devel
 BuildRequires:	gtk+-devel >= 1.2.8
 BuildRequires:	BMRT >= 2.5
@@ -18,13 +19,14 @@ Buildroot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %define		_prefix		/usr/X11R6
 
 %description
+K-3D is the free 3D modeling, animation, and rendering system.
 
 %description -l pl
+K-3D jest darmowym systemem do modelowania, animacji i renderowania
+3D.
 
 %prep
 %setup -q -n projects
-
-#%patch
 
 %build
 ./configure --prefix=%{_prefix}
