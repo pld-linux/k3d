@@ -1,5 +1,3 @@
-#TODO
-#- pl description
 Summary:	K-3D - 3D modeling, animation, and rendering system
 Summary(pl):	K-3D - system modelowania, animacji i renderingu 3D
 Name:		k3d
@@ -39,8 +37,18 @@ raytracing, radiosity rendering, true displacement, and user
 programmable shaders; and support for background and batch rendering.
 
 %description -l pl
-K-3D jest systemem modelowania, animacji i renderowania 3D, przeznaczonym
-dla platform GNU/Linux i Win32. 
+K-3D jest systemem modelowania, animacji i renderowania 3D,
+przeznaczonym dla platform GNU/Linux i Win32. Mo¿liwo¶ci obejmuj±
+tworzenie i edycjê geometrii w wielu dzia³aj±cych w czasie
+rzeczywistym widokach bry³owych, cieniowanych i teksturowanych OpenGL;
+nieograniczone undo i redo; pe³na rozszerzalno¶æ w czasie dzia³ania
+poprzez zewnêtrzne wtyczki; animowane proceduralne efekty geometryczne;
+wszystkie parametry animowalne poprzez spójny interfejs oparty na
+sterowaniu splajnami; renderowanie poprzez silniki zgodne z
+interfejsem Rendermana; optymalizacjê do u¿ywania z silnikiem
+renderuj±cym BMRT, obs³uguj±cym raytracing, radiosity, prawdziwe
+przemieszczenia i cieniowanie programowalne przez u¿ytkownika;
+obs³ugê renderowania w tle i wsadowego.
 
 %package devel
 Summary:        K-3D plugin and extension development kit
@@ -53,7 +61,7 @@ Requires:	libsigc++1-devel
 
 %description devel
 Header files for writing K-3D plugins and extensions.
-                                                                                                         
+
 %description devel -l pl
 Pliki nag³ówkowe do tworzenia wtyczek i rozszerzeñ dla K-3D.
 
@@ -92,7 +100,9 @@ rm -rf $RPM_BUILD_ROOT
 %doc AUTHORS ChangeLog NEWS README TODO $RPM_BUILD_ROOT%{_datadir}/%{name}/doc/user_reference
 %attr(755,root,root) %{_bindir}/*
 %attr(755,root,root) %{_libdir}/lib*.so.*.*.*
-%{_libdir}/%{name}/lib*.so*
+%dir %{_libdir}/%{name}
+%attr(755,root,root) %{_libdir}/%{name}/lib*.so*
+%dir %{_datadir}/%{name}
 %{_datadir}/%{name}/*.conf
 %{_datadir}/%{name}/dialogtemplates
 %{_datadir}/%{name}/scripts
@@ -100,8 +110,6 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/%{name}/tutorials
 %{_desktopdir}/*.desktop
 %{_pixmapsdir}/*.png
-%dir %{_datadir}/%{name}
-%dir %{_libdir}/%{name}
 %{_mandir}/man1/*
 
 %files devel
