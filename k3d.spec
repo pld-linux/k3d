@@ -13,7 +13,6 @@ Requires:	OpenGL
 Buildroot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define 	_noautoreqdep	libGL.so.1 libGLU.so.1
-%define		_prefix		/usr/X11R6
 
 %description
 K-3D is the free 3D modeling, animation, and rendering system.
