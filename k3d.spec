@@ -7,7 +7,7 @@ Version:	0.4.0.0
 Release:	0.1
 License:	GPL
 Group:		X11/Applications/Graphics
-Source0:	http://http://dl.sourceforge.net/%{name}/%{name}-%{version}-src.tar.bz2
+Source0:	http://dl.sourceforge.net/%{name}/%{name}-%{version}-src.tar.bz2
 # Source0-md5:	10060990546e2e65ddfbcdf4f34729d4
 Source1:	%{name}.desktop
 Patch0:		%{name}-am18.patch
