@@ -6,6 +6,7 @@ Release:	1
 License:	GPL
 Group:		X11/Applications/Graphics
 Source0:	http://www.k-3d.com/downloads/%{name}-%{version}-src.tar.bz2
+# Source0-md5:	fff6b42527c5d5dd7bbe67da9a9558f0
 BuildRequires:	OpenGL-devel
 BuildRequires:	gtk+-devel >= 1.2.8
 BuildRequires:	BMRT >= 2.5
