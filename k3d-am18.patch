@@ -1,0 +1,210 @@
+diff -urN k3d-0.4.0.0.orig/acinclude.m4 k3d-0.4.0.0.new/acinclude.m4
+--- k3d-0.4.0.0.orig/acinclude.m4	2004-04-27 16:44:40.000000000 +0200
++++ k3d-0.4.0.0.new/acinclude.m4	2004-05-30 21:46:25.014461256 +0200
+@@ -1,7 +1,7 @@
+ ########################################################
+ # K3D_CHECK_X86 - tests to see if we're building for an x86 platform
+ 
+-AC_DEFUN(K3D_CHECK_X86, [
++AC_DEFUN([K3D_CHECK_X86], [
+ AC_MSG_CHECKING([for an x86 CPU])
+ 
+ if echo $target_cpu | grep "i.86" >/dev/null 2>/dev/null; then
+@@ -16,7 +16,7 @@
+ ########################################################
+ # K3D_CHECK_WIN32 - tests to see if we're building for Win32
+ 
+-AC_DEFUN(K3D_CHECK_WIN32, [
++AC_DEFUN([K3D_CHECK_WIN32], [
+ AC_SUBST(K3D_TIME_CFLAGS)
+ AC_MSG_CHECKING([for Win32])
+ AC_ARG_WITH(win32-prefix,[  --with-win32-prefix[[=PATH]]    change location of win32 libs [[/c/Projects/k3d-win32]]],[],[withval=/c/Projects/k3d-win32])
+@@ -43,7 +43,7 @@
+ ########################################################
+ # K3D_CHECK_OPENGL - tests for an installed OpenGL library
+ 
+-AC_DEFUN(K3D_CHECK_OPENGL, [
++AC_DEFUN([K3D_CHECK_OPENGL], [
+ AC_SUBST(K3D_OPENGL_CFLAGS)
+ AC_SUBST(K3D_OPENGL_LIBS)
+ AC_MSG_CHECKING([for OpenGL])
+@@ -83,7 +83,7 @@
+ ########################################################
+ # K3D_CHECK_OPENGLU - tests for an installed OpenGLU library
+ 
+-AC_DEFUN(K3D_CHECK_OPENGLU, [
++AC_DEFUN([K3D_CHECK_OPENGLU], [
+ AC_SUBST(K3D_OPENGLU_CFLAGS)
+ AC_SUBST(K3D_OPENGLU_LIBS)
+ AC_MSG_CHECKING([for OpenGLU])
+@@ -123,7 +123,7 @@
+ ########################################################
+ # K3D_CHECK_COMPILERS
+ 
+-AC_DEFUN(K3D_CHECK_COMPILERS, [
++AC_DEFUN([K3D_CHECK_COMPILERS], [
+ 
+ AC_ARG_WITH(gcc-2-96, [  --with-gcc-2-96         build using gcc 2.96, which may generate unusable executables [[no]]],[],[withval=no])
+ if test x"$withval" = xyes; then
+@@ -164,7 +164,7 @@
+ ########################################################
+ # K3D_COMPILER_FLAGS
+ 
+-AC_DEFUN(K3D_COMPILER_FLAGS, [
++AC_DEFUN([K3D_COMPILER_FLAGS], [
+ AC_SUBST(K3D_CFLAGS)
+ AC_SUBST(K3D_CPPFLAGS)
+ AC_SUBST(K3D_CXXFLAGS)
+@@ -184,7 +184,7 @@
+ ########################################################
+ # K3D_WITH_FREETYPE2
+ 
+-AC_DEFUN(K3D_WITH_FREETYPE2, [
++AC_DEFUN([K3D_WITH_FREETYPE2], [
+ AC_SUBST(K3D_FREETYPE2_SUBDIR)
+ AC_SUBST(K3D_FREETYPE2_CFLAGS)
+ AC_SUBST(K3D_FREETYPE2_LIBS)
+@@ -213,7 +213,7 @@
+ ########################################################
+ # K3D_WITH_PYTHON
+ 
+-AC_DEFUN(K3D_WITH_PYTHON, [
++AC_DEFUN([K3D_WITH_PYTHON], [
+ AC_SUBST(K3D_PYTHON_SUBDIR)
+ AC_SUBST(K3D_PYTHON_CPPFLAGS)
+ AC_SUBST(K3D_PYTHON_LIBADD)
+@@ -263,7 +263,7 @@
+ ########################################################
+ # K3D_WITH_PLIB
+ 
+-AC_DEFUN(K3D_WITH_PLIB, [
++AC_DEFUN([K3D_WITH_PLIB], [
+ AC_SUBST(K3D_PLIB_SUBDIR)
+ AC_SUBST(K3D_PLIB_CFLAGS)
+ AC_SUBST(K3D_PLIB_LIBS)
+@@ -287,7 +287,7 @@
+ ########################################################
+ # K3D_WITH_ODE
+ 
+-AC_DEFUN(K3D_WITH_ODE, [
++AC_DEFUN([K3D_WITH_ODE], [
+ AC_SUBST(K3D_ODE_SUBDIR)
+ AC_SUBST(K3D_ODE_CFLAGS)
+ AC_SUBST(K3D_ODE_LIBS)
+@@ -306,7 +306,7 @@
+ ########################################################
+ # K3D_WITH_RUBY
+ 
+-AC_DEFUN(K3D_WITH_RUBY, [
++AC_DEFUN([K3D_WITH_RUBY], [
+ AC_SUBST(K3D_RUBY_SUBDIR)
+ AC_SUBST(K3D_RUBY_CPPFLAGS)
+ AC_SUBST(K3D_RUBY_LIBADD)
+@@ -354,7 +354,7 @@
+ ########################################################
+ # K3D_WITH_DOCBOOK
+ 
+-AC_DEFUN(K3D_WITH_DOCBOOK, [
++AC_DEFUN([K3D_WITH_DOCBOOK], [
+ AC_SUBST(K3D_USERREFERENCE_SUBDIR)
+ AC_SUBST(K3D_DEVELOPERGUIDE_SUBDIR)
+ AC_ARG_WITH(docbook, [  --with-docbook          generate documentation from DocBook sources [[yes]]],[],[withval=yes])
+@@ -372,7 +372,7 @@
+ ########################################################
+ # K3D_WITH_GRAPHVIZ
+ 
+-AC_DEFUN(K3D_WITH_GRAPHVIZ, [
++AC_DEFUN([K3D_WITH_GRAPHVIZ], [
+ AC_SUBST(K3D_HAVE_DOT)
+ 
+ K3D_HAVE_DOT="NO"
+@@ -395,7 +395,7 @@
+ ########################################################
+ # K3D_WITH_NETPBM
+ 
+-AC_DEFUN(K3D_WITH_NETPBM, [
++AC_DEFUN([K3D_WITH_NETPBM], [
+ AC_SUBST(K3D_HAVE_NETPBM)
+ 
+ K3D_HAVE_NETPBM="no"
+@@ -423,7 +423,7 @@
+ #######################################################
+ # K3D_WITH_NEW_PNMTOTIFF
+ 
+-AC_DEFUN(K3D_WITH_NEW_PNMTOTIFF, [
++AC_DEFUN([K3D_WITH_NEW_PNMTOTIFF], [
+ AC_SUBST(K3D_PNMTOTIFF_FLAGS)
+ 
+ K3D_PNMTOTIFF_FLAGS=""
+@@ -461,7 +461,7 @@
+ #######################################################
+ # K3D_WITH_IMAGEMAGICK
+ 
+-AC_DEFUN(K3D_WITH_IMAGEMAGICK, [
++AC_DEFUN([K3D_WITH_IMAGEMAGICK], [
+ AC_SUBST(K3D_IMAGEMAGICK_CPPFLAGS)
+ AC_SUBST(K3D_IMAGEMAGICK_CXXFLAGS)
+ AC_SUBST(K3D_IMAGEMAGICK_LIBS)
+@@ -532,7 +532,7 @@
+ ########################################################
+ # K3D_WITH_OPENEXR
+ 
+-AC_DEFUN(K3D_WITH_OPENEXR, [
++AC_DEFUN([K3D_WITH_OPENEXR], [
+ AC_SUBST(K3D_OPENEXR_CFLAGS)
+ AC_SUBST(K3D_OPENEXR_LIBS)
+ AC_SUBST(K3D_OPENEXR_SUBDIR)
+@@ -554,7 +554,7 @@
+ ########################################################
+ # K3D_WITH_GTK - tests for an installed GTK+ library
+ 
+-AC_DEFUN(K3D_WITH_GTK, [
++AC_DEFUN([K3D_WITH_GTK], [
+ AC_SUBST(K3D_GLIB_CFLAGS)
+ AC_SUBST(K3D_GLIB_LIBS)
+ AC_SUBST(K3D_GTK_CFLAGS)
+@@ -621,7 +621,7 @@
+ ########################################################
+ # K3D_CHECK_SIGC - tests for an installed libsigc++ library
+ 
+-AC_DEFUN(K3D_CHECK_SIGC, [
++AC_DEFUN([K3D_CHECK_SIGC], [
+ AC_SUBST(K3D_SIGC_CFLAGS)
+ AC_SUBST(K3D_SIGC_LIBS)
+ AC_SUBST(K3D_SIGC_HEADER)
+@@ -700,7 +700,7 @@
+ #####################################################
+ # K3D_HAPY_CONFIG
+ 
+-AC_DEFUN(HAPY_CHECK_SPN_STRING_COMPARE, [
++AC_DEFUN([HAPY_CHECK_SPN_STRING_COMPARE], [
+ AC_CACHE_CHECK(for non-standard std::string::compare profile,
+ 	ac_cv_have_spn_string_compare, [
+         AC_TRY_COMPILE([
+@@ -721,7 +721,7 @@
+ fi
+ ])
+ 
+-AC_DEFUN(HAPY_CHECK_NUMERIC_LIMITS, [
++AC_DEFUN([HAPY_CHECK_NUMERIC_LIMITS], [
+ AC_CACHE_CHECK(for std::numeric_limits,
+ 	ac_cv_have_numeric_limits, [
+         AC_TRY_COMPILE([
+@@ -741,7 +741,7 @@
+ fi
+ ])
+ 
+-AC_DEFUN(HAPY_CHECK_STD_ITERATOR_TYPE, [
++AC_DEFUN([HAPY_CHECK_STD_ITERATOR_TYPE], [
+ AC_CACHE_CHECK(for std::iterator, ac_cv_have_std_iterator_type, [
+ 	AC_TRY_COMPILE([
+ 		#include <iterator>
+@@ -767,7 +767,7 @@
+ ########################################################
+ # K3D_WITH_GTS
+ 
+-AC_DEFUN(K3D_WITH_GTS, [
++AC_DEFUN([K3D_WITH_GTS], [
+ AC_SUBST(K3D_GTS_SUBDIR)
+ AC_SUBST(K3D_GTS_CPPFLAGS)
+ AC_SUBST(K3D_GTS_LDFLAGS)
