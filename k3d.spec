@@ -11,7 +11,7 @@ BuildRequires:	OpenGL-devel
 BuildRequires:	gtk+-devel >= 1.2.8
 BuildRequires:	BMRT >= 2.5
 Requires:	OpenGL
-Buildroot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define 	_noautoreqdep	libGL.so.1 libGLU.so.1
 
