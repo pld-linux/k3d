@@ -1,0 +1,12 @@
+[Desktop Entry]
+Name=K-3D
+Comment=3D Modelling and Animation System
+Comment[pl]=System modelowania i animacji 3D
+Comment[sv]=3D Modellering och Animation
+Icon=k3d2.png
+Exec=k3d
+Terminal=false
+MultipleArgs=false
+Type=Application
+Categories=Application;Graphics;
+# vi: encoding=utf-8
