@@ -1,15 +1,14 @@
 Summary:	K-3D - 3D modeling, animation, and rendering system
 Summary(pl):	K-3D - system modelowania, animacji i renderingu 3D
 Name:		k3d
-Version:	0.4.2
+Version:	0.4.3.0
 Release:	0.1
 License:	GPL
 Group:		X11/Applications/Graphics
-Source0:	http://dl.sourceforge.net/%{name}/%{name}-%{version}.tbz2
-# Source0-md5:	5131b372a1b0021a7f96274da14b9d06
+Source0:	http://dl.sourceforge.net/k3d/%{name}-%{version}.tbz2
+# Source0-md5:	bf45904827a6a37b601ffaa963695a14
 Source1:	%{name}.desktop
-Patch0:		%{name}-am18.patch
-Patch1:		%{name}-user_reference_path.patch
+Patch0:		%{name}-user_reference_path.patch
 URL:		http://k3d.sourceforge.net/
 BuildRequires:	ImageMagick-c++-devel
 BuildRequires:	OpenGL-devel
@@ -68,7 +67,6 @@ Pliki nag³ówkowe do tworzenia wtyczek i rozszerzeñ dla K-3D.
 %prep
 %setup -q
 %patch0 -p1
-%patch1 -p1
 
 mv -f k3dui/application_window.cpp k3dui/application_window.cpp.in
 
@@ -89,7 +87,7 @@ install -d $RPM_BUILD_ROOT{%{_desktopdir},%{_pixmapsdir}}
 
 install %{SOURCE1} $RPM_BUILD_ROOT%{_desktopdir}
 
-mv -f $RPM_BUILD_ROOT%{_datadir}/%{name}/icons/k3d*.png $RPM_BUILD_ROOT%{_pixmapsdir}
+mv -f $RPM_BUILD_ROOT%{_datadir}/%{name}/icons/*.png $RPM_BUILD_ROOT%{_pixmapsdir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
