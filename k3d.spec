@@ -1,12 +1,12 @@
 Summary:	K-3D - 3D modeling, animation, and rendering system
 Summary(pl):	K-3D - system modelowania, animacji i renderingu 3D
 Name:		k3d
-Version:	0.4.0.0
+Version:	0.4.1.0
 Release:	0.1
 License:	GPL
 Group:		X11/Applications/Graphics
-Source0:	http://dl.sourceforge.net/%{name}/%{name}-%{version}-src.tar.bz2
-# Source0-md5:	10060990546e2e65ddfbcdf4f34729d4
+Source0:	http://dl.sourceforge.net/%{name}/%{name}-%{version}.tbz2
+# Source0-md5:	a633901d9694ba07968bb5fcbdf35a69
 Source1:	%{name}.desktop
 Patch0:		%{name}-am18.patch
 Patch1:		%{name}-user_reference_path.patch
@@ -68,7 +68,9 @@ Pliki nag³ówkowe do tworzenia wtyczek i rozszerzeñ dla K-3D.
 %prep
 %setup -q
 %patch0 -p1
-%patch1	-p1
+%patch1 -p1
+
+mv -f k3dui/application_window.cpp k3dui/application_window.cpp.in
 
 %build
 %{__libtoolize}
@@ -97,7 +99,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc AUTHORS ChangeLog NEWS README TODO $RPM_BUILD_ROOT%{_datadir}/%{name}/doc/user_reference
+%doc AUTHORS ChangeLog NEWS README TODO user_reference
 %attr(755,root,root) %{_bindir}/*
 %attr(755,root,root) %{_libdir}/lib*.so.*.*.*
 %dir %{_libdir}/%{name}
@@ -116,4 +118,5 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/lib*.so
 %{_libdir}/lib*.la
+%{_libdir}/%{name}/lib*.la
 %{_includedir}/%{name}
