@@ -9,5 +9,5 @@ Exec=k3d
 Terminal=false
 MultipleArgs=false
 Type=Application
-Categories=GTK;Graphics;
+Categories=GTK;Graphics;3DGraphics;
 # vi: encoding=utf-8
