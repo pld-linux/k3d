@@ -1,0 +1,12 @@
+diff -urN k3d-0.4.0.0.orig/k3dui/application_window.cpp k3d-0.4.0.0.new/k3dui/application_window.cpp
+--- k3d-0.4.0.0.orig/k3dui/application_window.cpp	2004-04-26 00:19:08.000000000 +0200
++++ k3d-0.4.0.0.new/k3dui/application_window.cpp	2004-06-04 20:32:57.919459088 +0200
+@@ -288,7 +288,7 @@
+ 	void on_help_manual()
+ 	{
+ 		if(application().user_interface())
+-			application().user_interface()->browser_navigate((application().share_path() / "/doc/user_reference/index.html").native_file_string());
++			application().user_interface()->browser_navigate("/usr/share/doc/k3d-0.4.0.0/user_reference/index.html");
+ 	}
+ 
+ 	/// Called to display an "about" box with program version and copyright information
