@@ -9,11 +9,13 @@ Source0:	http://dl.sourceforge.net/k3d/%{name}-%{version}.tbz2
 # Source0-md5:	bf45904827a6a37b601ffaa963695a14
 Source1:	%{name}.desktop
 Patch0:		%{name}-user_reference_path.patch
+Patch1:		%{name}-new_pnm.patch
 URL:		http://k3d.sourceforge.net/
 BuildRequires:	ImageMagick-c++-devel
 BuildRequires:	OpenGL-devel
 BuildRequires:	autoconf
 BuildRequires:	automake
+BuildRequires:	graphviz
 BuildRequires:	gtk+-devel >= 1.2.8
 BuildRequires:	libsigc++1-devel
 BuildRequires:	libtool
@@ -67,6 +69,7 @@ Pliki nag³ówkowe do tworzenia wtyczek i rozszerzeñ dla K-3D.
 %prep
 %setup -q
 %patch0 -p1
+%patch1
 
 mv -f k3dui/application_window.cpp k3dui/application_window.cpp.in
 
