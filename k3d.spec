@@ -2,7 +2,7 @@ Summary:	K-3D - 3D modeling, animation, and rendering system
 Summary(pl):	K-3D - system modelowania, animacji i renderingu 3D
 Name:		k3d
 Version:	0.4.5.0
-Release:	1
+Release:	2
 License:	GPL
 Group:		X11/Applications/Graphics
 Source0:	http://dl.sourceforge.net/k3d/%{name}-%{version}.tbz2
@@ -20,6 +20,7 @@ BuildRequires:	gtk+-devel >= 1.2.8
 BuildRequires:	libsigc++1-devel
 BuildRequires:	libtool
 BuildRequires:	netpbm-devel >= 10.28
+BuildRequires:	netpbm-progs >= 10.28
 Requires:	OpenGL
 Requires:	renderman-engine
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
