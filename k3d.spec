@@ -21,12 +21,12 @@ BuildRequires:	libsigc++1-devel
 BuildRequires:	libtool
 BuildRequires:	netpbm-devel >= 10.28
 BuildRequires:	netpbm-progs >= 10.28
-Requires:	OpenGL
-Requires:	renderman-engine
 %ifarch %{x8664}
 # http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=285364
-BuildRequires:	gcc-c++ >= 3.4.0
+BuildRequires:	gcc-c++ >= 5:3.4.0
 %endif
+Requires:	OpenGL
+Requires:	renderman-engine
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define 	_noautoreqdep	libGL.so.1 libGLU.so.1
