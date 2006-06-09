@@ -58,10 +58,10 @@ przemieszczenia i cieniowanie programowalne przez u¿ytkownika;
 obs³ugê renderowania w tle i wsadowego.
 
 %package devel
-Summary:        K-3D plugin and extension development kit
-Summary(pl):    Pliki potrzebne do budowania modu³ów i rozszerzeñ dla K-3D
-Group:          Development/Libraries
-Requires:       %{name} = %{version}-%{release}
+Summary:	K-3D plugin and extension development kit
+Summary(pl):	Pliki potrzebne do budowania modu³ów i rozszerzeñ dla K-3D
+Group:		Development/Libraries
+Requires:	%{name} = %{version}-%{release}
 Requires:	ImageMagick-c++-devel
 Requires:	gtk+-devel >= 1.2.8
 Requires:	libsigc++1-devel
