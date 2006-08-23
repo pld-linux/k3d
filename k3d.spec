@@ -17,7 +17,7 @@ BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	graphviz
 BuildRequires:	gtk+-devel >= 1.2.8
-BuildRequires:	libsigc++1-devel
+BuildRequires:	libsigc++-devel
 BuildRequires:	libtool
 BuildRequires:	netpbm-devel >= 10.28
 BuildRequires:	netpbm-progs >= 10.28
