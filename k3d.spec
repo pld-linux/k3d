@@ -12,7 +12,7 @@ Patch0:		%{name}-user_reference_path.patch
 Patch1:		%{name}-new_pnm.patch
 URL:		http://k3d.sourceforge.net/
 BuildRequires:	ImageMagick-c++-devel >= 1:6.2.4.0
-BuildRequires:	OpenERX-devel
+BuildRequires:	OpenEXR-devel
 BuildRequires:	OpenGL-devel
 BuildRequires:	autoconf
 BuildRequires:	automake
