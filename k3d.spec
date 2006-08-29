@@ -77,13 +77,13 @@ Pliki nag³ówkowe do tworzenia wtyczek i rozszerzeñ dla K-3D.
 #patch0 -p1
 #patch1
 
-mv -f k3dui/application_window.cpp k3dui/application_window.cpp.in
+#mv -f k3dui/application_window.cpp k3dui/application_window.cpp.in
 
 %build
-%{__libtoolize}
-%{__aclocal}
-%{__autoconf}
-%{__automake}
+#%{__libtoolize}
+#%{__aclocal}
+#%{__autoconf}
+#%{__automake}
 %configure
 %{__make}
 
