@@ -1,12 +1,12 @@
 Summary:	K-3D - 3D modeling, animation, and rendering system
 Summary(pl):	K-3D - system modelowania, animacji i renderingu 3D
 Name:		k3d
-Version:	0.4.5.0
-Release:	4
+Version:	0.6.0.0
+Release:	0.1
 License:	GPL
 Group:		X11/Applications/Graphics
-Source0:	http://dl.sourceforge.net/k3d/%{name}-%{version}.tbz2
-# Source0-md5:	943599d20d35faf3e2033d3304cc2079
+Source0:	http://dl.sourceforge.net/k3d/%{name}-%{version}-src.tar.bz2
+# Source0-md5:	c9642b1483ddd3e1adc6d4118ba677e4
 Source1:	%{name}.desktop
 Patch0:		%{name}-user_reference_path.patch
 Patch1:		%{name}-new_pnm.patch
@@ -16,8 +16,8 @@ BuildRequires:	OpenGL-devel
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	graphviz
-BuildRequires:	gtk+-devel >= 1.2.8
-BuildRequires:	libsigc++1-devel
+BuildRequires:	gtk+2-devel
+BuildRequires:	libsigc++-devel
 BuildRequires:	libtool
 BuildRequires:	netpbm-devel >= 10.28
 BuildRequires:	netpbm-progs >= 10.28
@@ -74,8 +74,8 @@ Pliki nag³ówkowe do tworzenia wtyczek i rozszerzeñ dla K-3D.
 
 %prep
 %setup -q
-%patch0 -p1
-%patch1
+#patch0 -p1
+#patch1
 
 mv -f k3dui/application_window.cpp k3dui/application_window.cpp.in
 
