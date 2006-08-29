@@ -84,7 +84,8 @@ Pliki nag³ówkowe do tworzenia wtyczek i rozszerzeñ dla K-3D.
 #%{__aclocal}
 #%{__autoconf}
 #%{__automake}
-%configure
+%configure \
+	--without-external-boost
 %{__make}
 
 %install
