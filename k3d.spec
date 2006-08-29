@@ -2,7 +2,7 @@ Summary:	K-3D - 3D modeling, animation, and rendering system
 Summary(pl):	K-3D - system modelowania, animacji i renderingu 3D
 Name:		k3d
 Version:	0.6.0.0
-Release:	0.1
+Release:	0.2
 License:	GPL
 Group:		X11/Applications/Graphics
 Source0:	http://dl.sourceforge.net/k3d/%{name}-%{version}-src.tar.bz2
@@ -12,15 +12,21 @@ Patch0:		%{name}-user_reference_path.patch
 Patch1:		%{name}-new_pnm.patch
 URL:		http://k3d.sourceforge.net/
 BuildRequires:	ImageMagick-c++-devel >= 1:6.2.4.0
+BuildRequires:	OpenERX-devel
 BuildRequires:	OpenGL-devel
 BuildRequires:	autoconf
 BuildRequires:	automake
+BuildRequires:	freetype-devel
 BuildRequires:	graphviz
+BuildRequires:	glibmm-devel
 BuildRequires:	gtk+2-devel
+Buildrequires:	libgnome-devel
 BuildRequires:	libsigc++-devel
 BuildRequires:	libtool
-BuildRequires:	netpbm-devel >= 10.28
-BuildRequires:	netpbm-progs >= 10.28
+BuildRequires:	libxml2-devel
+Buildrequires:	plib-devel
+#BuildRequires:	netpbm-devel >= 10.28
+#BuildRequires:	netpbm-progs >= 10.28
 %ifarch %{x8664}
 # http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=285364
 BuildRequires:	gcc-c++ >= 5:3.4.0
@@ -85,7 +91,10 @@ Pliki nag³ówkowe do tworzenia wtyczek i rozszerzeñ dla K-3D.
 #%{__autoconf}
 #%{__automake}
 %configure \
-	--without-external-boost
+	--without-external-boost \
+	--without-ngui \
+	--with-libxml2 \
+	--with-graphviz
 %{__make}
 
 %install
