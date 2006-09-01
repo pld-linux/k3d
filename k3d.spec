@@ -2,7 +2,7 @@ Summary:	K-3D - 3D modeling, animation, and rendering system
 Summary(pl):	K-3D - system modelowania, animacji i renderingu 3D
 Name:		k3d
 Version:	0.6.0.0
-Release:	0.2
+Release:	0.3
 License:	GPL
 Group:		X11/Applications/Graphics
 Source0:	http://dl.sourceforge.net/k3d/%{name}-%{version}-src.tar.bz2
