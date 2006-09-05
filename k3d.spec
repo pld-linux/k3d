@@ -16,10 +16,14 @@ BuildRequires:	OpenEXR-devel
 BuildRequires:	OpenGL-devel
 BuildRequires:	autoconf
 BuildRequires:	automake
+BuildRequires:	boost-date_time-devel >= 1.33
+BuildRequires:	boost-filesystem-devel >= 1.33
+BuildRequires:	boost-regex-devel >= 1.33
 BuildRequires:	freetype-devel
 BuildRequires:	graphviz
 BuildRequires:	glibmm-devel
 BuildRequires:	gtk+2-devel
+BuildRequires:	gts-devel
 Buildrequires:	libgnome-devel
 BuildRequires:	libsigc++-devel
 BuildRequires:	libtool
@@ -91,10 +95,23 @@ Pliki nag³ówkowe do tworzenia wtyczek i rozszerzeñ dla K-3D.
 #%{__autoconf}
 #%{__automake}
 %configure \
-	--without-external-boost \
-	--without-ngui \
 	--with-libxml2 \
-	--with-graphviz
+	--with-external-boost \
+	--with-freetype2 \
+	--with-gnome \
+	--with-graphviz \
+	--with-gts \
+	--with-imagemagick \
+	--with-jpeg \
+	--without-ngui \
+	--with-nls \
+	--with-openexr \
+	--with-plib \
+	--with-png \
+	--without-qt \
+	--with-svg-icons \
+	--with-tiff
+
 %{__make}
 
 %install
