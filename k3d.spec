@@ -8,8 +8,9 @@ Group:		X11/Applications/Graphics
 Source0:	http://dl.sourceforge.net/k3d/%{name}-%{version}-src.tar.bz2
 # Source0-md5:	c9642b1483ddd3e1adc6d4118ba677e4
 Source1:	%{name}.desktop
-Patch0:		%{name}-user_reference_path.patch
-Patch1:		%{name}-new_pnm.patch
+Patch0:		%{name}-lib64-fix.patch
+#Patch0:		%{name}-user_reference_path.patch
+#Patch1:		%{name}-new_pnm.patch
 URL:		http://k3d.sourceforge.net/
 BuildRequires:	ImageMagick-c++-devel >= 1:6.2.4.0
 BuildRequires:	OpenEXR-devel
@@ -87,7 +88,7 @@ Pliki nag³ówkowe do tworzenia wtyczek i rozszerzeñ dla K-3D.
 
 %prep
 %setup -q
-#patch0 -p1
+%patch0 -p1
 #patch1
 
 #mv -f k3dui/application_window.cpp k3dui/application_window.cpp.in
@@ -115,7 +116,7 @@ Pliki nag³ówkowe do tworzenia wtyczek i rozszerzeñ dla K-3D.
 	--with-svg-icons \
 	--with-tiff
 
-#{__make}
+%{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
