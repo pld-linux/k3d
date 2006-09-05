@@ -2,7 +2,7 @@ Summary:	K-3D - 3D modeling, animation, and rendering system
 Summary(pl):	K-3D - system modelowania, animacji i renderingu 3D
 Name:		k3d
 Version:	0.6.0.0
-Release:	0.3
+Release:	0.4
 License:	GPL
 Group:		X11/Applications/Graphics
 Source0:	http://dl.sourceforge.net/k3d/%{name}-%{version}-src.tar.bz2
@@ -16,12 +16,15 @@ BuildRequires:	OpenEXR-devel
 BuildRequires:	OpenGL-devel
 BuildRequires:	autoconf
 BuildRequires:	automake
+BuildRequires:	boost-any-devel >= 1.33
+BuildRequires:	boost-array-devel >= 1.33
 BuildRequires:	boost-date_time-devel >= 1.33
 BuildRequires:	boost-filesystem-devel >= 1.33
 BuildRequires:	boost-regex-devel >= 1.33
+BuildRequires:	boost-spirit-devel >= 1.33
 BuildRequires:	freetype-devel
-BuildRequires:	graphviz
 BuildRequires:	glibmm-devel
+BuildRequires:	graphviz
 BuildRequires:	gtk+2-devel
 BuildRequires:	gts-devel
 Buildrequires:	libgnome-devel
@@ -112,7 +115,7 @@ Pliki nag³ówkowe do tworzenia wtyczek i rozszerzeñ dla K-3D.
 	--with-svg-icons \
 	--with-tiff
 
-%{__make}
+#{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
