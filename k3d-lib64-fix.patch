@@ -1,0 +1,20 @@
+--- k3d-0.6.0.0/configure.org	2006-08-19 04:01:17.000000000 +0000
++++ k3d-0.6.0.0/configure	2006-09-05 21:44:12.000000000 +0000
+@@ -19682,7 +19682,7 @@
+ echo $ECHO_N "checking for OpenGL... $ECHO_C" >&6
+ 
+ k3d_check_opengl_lib_dir=""
+-k3d_check_opengl_directories="/usr/lib /usr/local/lib /usr/X11R6/lib"
++k3d_check_opengl_directories="/usr/lib /usr/lib64 /usr/local/lib /usr/X11R6/lib"
+ for k3d_check_opengl_directory in $k3d_check_opengl_directories; do
+ 	if test -f $k3d_check_opengl_directory/libGL.so || test -f $k3d_check_opengl_directory/libGL.a || test -f $k3d_check_opengl_directory/libGL.dll.a; then
+ 		k3d_check_opengl_lib_dir=$k3d_check_opengl_directory
+@@ -19716,7 +19716,7 @@
+ echo $ECHO_N "checking for OpenGLU... $ECHO_C" >&6
+ 
+ k3d_check_openglu_lib_dir=""
+-k3d_check_openglu_directories="/usr/lib /usr/local/lib /usr/X11R6/lib"
++k3d_check_openglu_directories="/usr/lib /usr/lib64 /usr/local/lib /usr/X11R6/lib"
+ for k3d_check_openglu_directory in $k3d_check_openglu_directories; do
+ 	if test -f $k3d_check_openglu_directory/libGLU.so || test -f $k3d_check_openglu_directory/libGLU.a || test -f $k3d_check_openglu_directory/libGLU.dll.a; then
+ 		k3d_check_openglu_lib_dir=$k3d_check_openglu_directory
