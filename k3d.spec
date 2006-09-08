@@ -137,17 +137,13 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc AUTHORS ChangeLog NEWS README TODO user_reference
+%doc AUTHORS ChangeLog NEWS README TODO
 %attr(755,root,root) %{_bindir}/*
 %attr(755,root,root) %{_libdir}/lib*.so.*.*.*
 %dir %{_libdir}/%{name}
 %attr(755,root,root) %{_libdir}/%{name}/lib*.so*
 %dir %{_datadir}/%{name}
-%{_datadir}/%{name}/*.conf
-%{_datadir}/%{name}/dialogtemplates
-%{_datadir}/%{name}/scripts
-%{_datadir}/%{name}/shaders
-%{_datadir}/%{name}/tutorials
+%{_datadir}/%{name}/*
 %{_desktopdir}/*.desktop
 %{_pixmapsdir}/*.png
 %{_mandir}/man1/*
