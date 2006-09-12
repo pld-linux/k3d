@@ -108,6 +108,7 @@ Pliki nag³ówkowe do tworzenia wtyczek i rozszerzeñ dla K-3D.
 	--with-imagemagick \
 	--with-jpeg \
 	--without-ngui \
+	--without-python \
 	--with-nls \
 	--with-openexr \
 	--with-plib \
