@@ -25,6 +25,7 @@ BuildRequires:	freetype-devel
 BuildRequires:	glibmm-devel
 BuildRequires:	graphviz
 BuildRequires:	gtk+2-devel
+BuildRequires:	gtkglext-devel
 BuildRequires:	gts-devel
 Buildrequires:	libgnome-devel
 BuildRequires:	libsigc++-devel
