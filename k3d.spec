@@ -97,7 +97,7 @@ Pliki nagłówkowe do tworzenia wtyczek i rozszerzeń dla K-3D.
 	--with-gnome \
 	--with-graphviz \
 	--with-gts \
-	--with-imagemagick \
+	--without-imagemagick \
 	--with-jpeg \
 	--with-python \
 	--with-nls \
