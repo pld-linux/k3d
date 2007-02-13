@@ -1,5 +1,5 @@
 Summary:	K-3D - 3D modeling, animation, and rendering system
-Summary(pl.UTF-8):   K-3D - system modelowania, animacji i renderingu 3D
+Summary(pl.UTF-8):	K-3D - system modelowania, animacji i renderingu 3D
 Name:		k3d
 Version:	0.6.7.0
 Release:	0.2
@@ -72,7 +72,7 @@ obsługę renderowania w tle i wsadowego.
 
 %package devel
 Summary:	K-3D plugin and extension development kit
-Summary(pl.UTF-8):   Pliki potrzebne do budowania modułów i rozszerzeń dla K-3D
+Summary(pl.UTF-8):	Pliki potrzebne do budowania modułów i rozszerzeń dla K-3D
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	ImageMagick-c++-devel
