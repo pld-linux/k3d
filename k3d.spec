@@ -15,13 +15,7 @@ BuildRequires:	OpenEXR-devel
 BuildRequires:	OpenGL-devel
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	boost-any-devel >= 1.33
-BuildRequires:	boost-array-devel >= 1.33
-BuildRequires:	boost-bind-devel >= 1.33
-BuildRequires:	boost-date_time-devel >= 1.33
-BuildRequires:	boost-filesystem-devel >= 1.33
-BuildRequires:	boost-regex-devel >= 1.33
-BuildRequires:	boost-spirit-devel >= 1.33
+BuildRequires:	boost-devel >= 1.35.0
 BuildRequires:	freetype-devel
 BuildRequires:	glibmm-devel
 BuildRequires:	graphviz
