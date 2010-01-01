@@ -23,11 +23,11 @@ BuildRequires:	gtk+2-devel
 BuildRequires:	gtkglext-devel
 BuildRequires:	gtkmm-devel
 BuildRequires:	gts-devel
-Buildrequires:	libgnome-devel
+BuildRequires:	libgnome-devel
 BuildRequires:	libsigc++-devel
 BuildRequires:	libtool
 BuildRequires:	libxml2-devel
-Buildrequires:	plib-devel
+BuildRequires:	plib-devel
 %ifarch %{x8664}
 # http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=285364
 BuildRequires:	libstdc++-devel >= 5:3.4.0
