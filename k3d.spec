@@ -81,7 +81,7 @@ Pliki nagłówkowe do tworzenia wtyczek i rozszerzeń dla K-3D.
 
 %prep
 %setup -q
-%patch0 -p1
+%patch -P0 -p1
 
 %build
 %configure \
